@@ -1,8 +1,6 @@
-import threading     # I will be using a separate thread to allow the existance of more than 1 longcat if I choose to change the python script in the future.
-                     
+import threading     # I will be using a separate thread to allow the existance of more than 1 longcat if I choose to change the python script in the future.       
 import time          # Used for python's time.sleep()
 import random        # Used to spawn the longcat at a random location
-
 from tkinter import Tk, Canvas, PhotoImage, NW # TK will be the UI toolkit i'll be using
 
 def catThread(root): # this will be the thread used to organize the movement of the longcat
@@ -59,6 +57,5 @@ root.overrideredirect(1) # needed for wanted visual behaviour
 
 catPosThread = threading.Thread(target=catThread, args=(root,)) # start thread as described above
 catPosThread.start()
-
 
 root.mainloop()
