@@ -1,7 +1,7 @@
 import threading     # I will be using a separate thread to allow the existance of more than 1 longcat if I choose to change the python script in the future.
                      
 import time          # Used for python's time.sleep()
-import random        # Used to spawn the lolcat at a random location
+import random        # Used to spawn the longcat at a random location
 
 from tkinter import Tk, Canvas, PhotoImage, NW # TK will be the UI toolkit i'll be using
 
@@ -14,13 +14,13 @@ def catThread(root): # this will be the thread used to organize the movement of 
     catMomY = 6
     
     while(1):
-        # return and throw back the coords and momentum of the lolcat
+        # return and throw back the coords and momentum of the longcat
         catPosX, catPosY, catMomX, catMomY = makecatMove(root, catPosX, catPosY, catMomX, catMomY)
         #print("moving cat...")
         time.sleep(0.015) #sleep
 
 def makecatMove(root, catPosX, catPosY, catMomX, catMomY):
-    # keep a var for the farthest spaces our lolcat can travel
+    # keep a var for the farthest spaces our longcat can travel
     max_screen_width  = root.winfo_screenwidth()  - 300
     max_screen_height = root.winfo_screenheight() - 550
 
