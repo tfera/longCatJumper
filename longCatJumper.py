@@ -1,4 +1,4 @@
-import threading     # I will be using a separate thread to allow the existance of more than 1 longcat if I choose to change the python script in the future.       
+import threading     # I will be using a separate thread to allow the existence of more than 1 longcat if I choose to change the python script in the future.       
 import time          # Used for python's time.sleep()
 import random        # Used to spawn the longcat at a random location
 from tkinter import Tk, Canvas, PhotoImage, NW # TK will be the UI toolkit i'll be using
@@ -29,7 +29,7 @@ def makecatMove(root, catPosX, catPosY, catMomX, catMomY):
     # always carry momentum no matter what
     catPosX = catPosX + catMomX
 
-    # same as X momentim but for top and bottom bounds
+    # same as X momentum but for top and bottom bounds
     if(catPosY >= max_screen_height or catPosY < 0):
         catMomY = catMomY * -1
         
